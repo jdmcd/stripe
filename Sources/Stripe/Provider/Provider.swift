@@ -70,7 +70,7 @@ public final class StripeClient: Service {
     public var files: FileRoutes
     public var person: PersonRoutes
     public var paymentIntents: PaymentIntentsRoutes
-    public var sessions: SessionRoutes
+    public var sessions: StripeSessionRoutes
 
     public init(apiKey: String, testKey: String?, client: Client) {
         let apiRequest = StripeAPIRequest(httpClient: client, apiKey: apiKey, testApiKey: testKey)
