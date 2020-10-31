@@ -71,7 +71,7 @@ public final class StripeClient: Service {
     public var person: PersonRoutes
     public var paymentIntents: PaymentIntentsRoutes
 
-    internal init(apiKey: String, testKey: String?, client: Client) {
+    public init(apiKey: String, testKey: String?, client: Client) {
         let apiRequest = StripeAPIRequest(httpClient: client, apiKey: apiKey, testApiKey: testKey)
         
         balance = StripeBalanceRoutes(request: apiRequest)
