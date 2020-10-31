@@ -60,7 +60,7 @@ public struct StripeRefundRoutes: RefundRoutes {
                        reverseTransfer: Bool?) throws -> Future<StripeRefund> {
         var body: [String: Any] = [:]
         
-        body["charge"] = charge
+        body["payment_intent"] = charge
         
         if let amount = amount {
             body["amount"] = amount
